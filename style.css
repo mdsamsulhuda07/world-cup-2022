@@ -1,14 +1,179 @@
 body{
     font-family: 'Poppins', sans-serif;
+    margin: auto;
 }
 main{
+    padding: 0px 25px ;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-/* For Desktop */
-.container{
+/* ---------------------
+ For Desktop
+ ----------------------- */
+ .container{
     max-width: 1320px;
+    margin-top: 50px;
+    
 }
 h1,h2,h3,h4,h5,h6,p{
     margin: 0 auto;
+}
+h1{
+    font-size: 64px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+h2{
+    font-size: 48px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+h3{
+    font-size: 36px;
+    line-height: 1.3em;
+    font-weight: 600;
+}
+h4{
+    font-size: 28px;
+    line-height: 1.3em;
+    font-weight: 600;
+}
+h5{
+    font-size: 20px;
+    line-height: 1.5em;
+    font-weight: 600;
+}
+h6{
+    font-size: 18px;
+    line-height: 1.7em;
+    font-weight: 600;
+}
+p{
+    font-size: 18px;
+    line-height: 1.8em;
+    font-weight: 400;
+}
+button{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------------------
+ Hero Section CSS starts
+ ----------------------- */
+.hero-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 70px;
+    background-color: #161616;
+    border-radius: 30px;
+}
+.hero-text, .hero-banner{
+    width: 50%;
+}
+.hero-text{
+    padding: 75px 0px 75px 75px ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.hero-text>h1,p{
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+.hero-text>button{
+    padding: 16px 25px;
+    border-radius: 5px;
+    background-color: #da2360;
+    color: #ffffff;
+    border: none;
+}
+.fa-angle-right{
+    margin-left: 15px;
+}
+.hero-banner{
+    display: flex;
+    align-items: flex-end;
+    padding-right: 75px;
+}
+.hero-banner img{
+    width: 100%;
+    height: fit-content;
+}
+/* ---------------------
+ Hero Section CSS ends
+ ----------------------- */
+
+ /* ---------------------
+ Blog Section CSS starts
+ ----------------------- */
+ .matches{
+    display: flex;
+    flex-direction: row;
+ }
+ .match-filter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    background-color: #161616;
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-height: 250px;
+
+ }
+ .match-filter button{
+    padding: 16px 25px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0px;
+ }
+ .filter-button{
+    background-color: #ffffff;
+    color: #161616;
+ }
+ .selected{
+    background-color: #da2360;
+    color: #ffffff;
+}
+.filter-result{
+    width: calc(100% - 250px);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 25px;
+    margin-left: 25px;
+}
+.result-grid{
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+}
+.result-grid img{
+    width: 100%;
+}
+.match-info{
+    padding: 15px;
+}
+.match-info ul{
+    list-style: none;
+    padding: 0;
+}
+.match-info ul>li{
+    display: inline;
+    margin-right: 15px;
+    opacity: 0.7;
+}
+.match-info button{
+    background-color: #ffffff;
+    color: #161616;
+    border: 1px solid #161616;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px 15px ;
+}
+.list-icon{
+    padding-right: 5px;
 }
