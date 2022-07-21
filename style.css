@@ -123,6 +123,7 @@ button, a{
 .matches{
     display: flex;
     flex-direction: row;
+    width: 100%;
  }
 .match-filter{
     display: flex;
@@ -168,7 +169,8 @@ button, a{
 .filter-result{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 25px;  
+    grid-gap: 25px;
+    width: 100%;
 }
 .result-grid{
     border: 1px solid #E8E8E8;
@@ -489,3 +491,35 @@ nav ul>li>a:hover{
         margin-top: 15px;
     }
 }
+
+/* -----------------------------
+    Upcoming Match page Desktop
+ ------------------------------ */
+    .timing-grid{
+        border: 1px solid #E8E8E8;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .teams{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .teams img{
+        width: 35%;
+    }
+    .match-timing{
+        margin-top: 25px;
+    }
+    .match-timing h5{
+        text-align: center;
+    }
+    .match-timing p{
+        color: #4D4D4D;
+        padding-bottom: 0;
+        text-align: center;
+    }
+    
