@@ -14,6 +14,7 @@ main{
  .container{
     max-width: 1320px;
     margin-top: 50px;
+    margin-bottom: 25px;
     
 }
 h1,h2,h3,h4,h5,h6,p{
@@ -54,7 +55,7 @@ p{
     line-height: 1.8em;
     font-weight: 400;
 }
-button{
+button, a{
     font-size: 18px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
@@ -85,12 +86,20 @@ button{
     color: #ffffff;
     padding-bottom: 20px;
 }
-.hero-text>button{
+.hero-button{
     padding: 16px 25px;
     border-radius: 5px;
     background-color: #da2360;
     color: #ffffff;
     border: none;
+    transition-duration: 1s;
+    text-decoration: none;
+}
+.hero-button:hover{
+    background-color: #00ffd5;
+    color: #161616;
+    transform: translateY(10px) scale(1.1);
+    cursor: pointer;
 }
 .fa-angle-right{
     margin-left: 15px;
@@ -111,11 +120,11 @@ button{
  /* ---------------------
  Blog Section CSS starts
  ----------------------- */
- .matches{
+.matches{
     display: flex;
     flex-direction: row;
  }
- .match-filter{
+.match-filter{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,32 +133,47 @@ button{
     padding: 20px 30px;
     border-radius: 10px;
     max-height: 250px;
-
  }
- .match-filter button{
-    padding: 16px 25px;
-    border-radius: 10px;
-    border: none;
-    margin: 10px 0px;
- }
- .filter-button{
+.filter-button{
     background-color: #ffffff;
     color: #161616;
+    margin: 10px 0px;
+    text-decoration: none;
+    padding: 16px 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
  }
- .selected{
+.selected{
     background-color: #da2360;
     color: #ffffff;
+    margin: 10px 0px;
+    text-decoration: none;
+    padding: 16px 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+.filter-button:hover, .selected:hover{
+    background-color: #00ffd5;
+    color: #161616;
+}
+.matches-right-column{
+    width: calc(100% - 250px);
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .filter-result{
-    width: calc(100% - 250px);
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 25px;
-    margin-left: 25px;
+    grid-gap: 25px;  
 }
 .result-grid{
     border: 1px solid #E8E8E8;
     border-radius: 10px;
+    cursor: pointer;
 }
 .result-grid img{
     width: 100%;
@@ -176,4 +200,242 @@ button{
 }
 .list-icon{
     padding-right: 5px;
+}
+.view-all{
+    margin-top: 50px;
+    display: none;
+}
+ /* ---------------------
+ Blog Section CSS ends
+ ----------------------- */
+
+/* ---------------------
+ Footer CSS starts
+ ----------------------- */
+footer{
+    background-color: #161616;
+    padding: 25px 25px 75px 25px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.footer-content h3{
+    color: #ffffff;
+}
+.footer-content hr{
+    width: 100vw;
+    color: #ffffff;
+    opacity: 0.1;
+    margin: 50px 0px;  
+}
+nav ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+nav ul>li{
+    display: inline;
+    margin: 0px 20px;
+}
+nav ul>li>a{
+    text-decoration: none;
+    color: #B9B9B9;
+}
+nav ul>li>a:hover{
+    color: #da2360;
+}
+.socials{
+    margin-top: 50px;
+}
+.social-icons{
+    color: #00ffd5;
+    font-size: 28px;
+    padding: 0px 5px;
+}
+.social-icons:hover{
+    color: #ffffff;
+}
+/* ---------------------
+ Footer CSS ends
+ ----------------------- */
+
+/* ---------------------------
+ Tablet Device Responsiveness
+--------------------------- */
+@media only screen and (min-width:668px) and (max-width:992px) {
+    .container{
+        max-width: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px; 
+    }
+    h1{
+        font-size: 36px;
+        line-height: 1.2em;
+    }
+    h2{
+        font-size: 28px;
+        line-height: 1.2em;
+    }
+    h3{
+        font-size: 24px;
+        line-height: 1.3em;
+    }
+    h4{
+        font-size: 22px;
+        line-height: 1.3em;
+    }
+    h5{
+        font-size: 20px;
+        line-height: 1.4em;
+    }
+    h6{
+        font-size: 18px;
+        line-height: 1.6em;
+    }
+    p{
+        font-size: 16px;
+    }
+    button{
+        font-size: 17px;
+    }
+/* -----------------------------
+ Hero Section Tablet Device CSS
+ ------------------------------ */
+    .hero-section{
+    column-gap: 10px;
+    }
+    .hero-text{
+        padding: 35px 0px 35px 35px;
+    }
+    .hero-banner{
+        padding-right: 25px;
+    }
+/* -----------------------------
+ Blog Section Tablet Device CSS
+ ------------------------------ */
+    .matches{
+        flex-wrap: wrap;
+    }
+    .match-filter{
+        width: 100%;
+        background-color: #ffffff;
+        padding: 0;
+        flex-direction: row;
+        margin-bottom: 25px;
+    }
+    .filter-button{
+        border: 1px solid #E8E8E8;
+        width: 33.33%;
+        margin: 0px 5px;
+        padding: 15px 20px;
+    }
+    .selected{
+        width: 33.33%;
+        margin: 0px 5px;
+        padding: 15px 20px;
+    }
+    .matches-right-column{
+        width: 100%;
+        margin: 25px 0px 0px 0px;
+    }
+    .filter-result{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .view-all{
+        display: block;
+    }
+/* -----------------------------
+ Nav Section Tablet Device CSS
+ ------------------------------ */
+    nav ul>li{
+        line-height: 2.7em;
+        margin: 0px 20px;
+    }
+    .footer-content hr{
+        margin: 25px 0px;
+    }
+    .socials{
+        margin-top: 25px;
+    }
+    
+ }
+/* ---------------------------
+ Mobile Device Responsiveness
+--------------------------- */
+@media only screen and (max-width:668px){
+    main{
+        padding: 0px 15px;
+    }
+    .container{
+        max-width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px; 
+    }
+    h1{
+        font-size: 28px;
+        line-height: 1.2em;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 1.2em;
+    }
+    h3{
+        font-size: 22px;
+        line-height: 1.3em;
+    }
+    h4{
+        font-size: 20px;
+        line-height: 1.3em;
+    }
+    h5{
+        font-size: 18px;
+        line-height: 1.4em;
+    }
+    h6{
+        font-size: 16px;
+        line-height: 1.6em;
+    }
+    p{
+        font-size: 14px;
+    }
+    button{
+        font-size: 16px;
+    }
+/* -----------------------------
+ Hero Section Tablet Device CSS
+ ------------------------------ */
+    .hero-section{
+        flex-wrap: wrap;
+        column-gap: 0px;
+        border-radius: 10px;
+    }
+    .hero-text, .hero-banner{
+        width: 100%;
+    }
+    .hero-text{
+        padding: 25px 15px 0px 15px;
+        align-items: center;
+    }
+    .hero-text>h1,p{
+        text-align: center;
+    }
+    .hero-button{
+        padding: 10px 15px;
+    }
+    .hero-banner{
+        padding: 25px 15px 0px 15px;
+    }
+/* -----------------------------
+ Blog Section Mobile Device CSS
+ ------------------------------ */
 }
