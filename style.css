@@ -438,4 +438,54 @@ nav ul>li>a:hover{
 /* -----------------------------
  Blog Section Mobile Device CSS
  ------------------------------ */
+    .matches{
+        flex-wrap: wrap;
+    }
+    .match-filter{
+        width: 100%;
+        background-color: #ffffff;
+        padding: 0;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    .filter-button{
+        border: 1px solid #E8E8E8;
+        margin: 5px 5px;
+        padding: 15px 20px;
+    }
+    .selected{
+        margin: 5px 5px;
+        padding: 15px 20px;
+    }
+    .matches-right-column{
+        width: 100%;
+        margin: 10px 0px 0px 0px;
+    }
+    .filter-result{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 15px;
+    }
+    .view-all{
+        display: none;
+    }
+/* --------------
+    Footer CSS
+ --------------- */
+    footer{
+        margin-top: 15px;
+        padding: 15px;
+    }
+    .footer-content hr{
+        margin: 15px 0px;
+    }
+    nav ul>li{
+        display: block;
+        margin: 0px 0px 15px 0px;
+    }
+    nav ul>li>a{
+        font-size: 14px;
+    }
+    .socials{
+        margin-top: 15px;
+    }
 }
